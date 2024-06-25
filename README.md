@@ -1,4 +1,4 @@
-## JUST COPY AND PEAST 😁
+## sem 3 at du 😁
 
 <!--
 **rahulroshiya22/rahulroshiya22** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
