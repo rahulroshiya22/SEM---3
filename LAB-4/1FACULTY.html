@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Display array</title>
+</head>
+<body>
+<script type="text/javascript">
+	let arr = [
+  {
+    "Name": "Saul Schuppe",
+    "Age": 12822,
+    "Number": "1-299-750-9413 x851",
+    "Avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/956.jpg",
+    "Address": "Tristinville",
+    "id": "1"
+  },
+  {
+    "Name": "Sophie Reilly",
+    "Age": 64543,
+    "Number": "570.523.9625 x040",
+    "Avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/885.jpg",
+    "Address": "Turcotteton",
+    "id": "2"
+  },
+  {
+    "Name": "Stephen Toy",
+    "Age": 50276,
+    "Number": "1-634-335-5714 x471",
+    "Avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/819.jpg",
+    "Address": "East Mariana",
+    "id": "3"
+  },
+  {
+    "Name": "Mr. Sophia Senger",
+    "Age": 79724,
+    "Number": "487-931-7165 x78889",
+    "Avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1223.jpg",
+    "Address": "Port Corine",
+    "id": "4"
+  },
+  {
+    "Name": "Marcus Steuber",
+    "Age": 12255,
+    "Number": "(534) 484-9784 x2019",
+    "Avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1132.jpg",
+    "Address": "Fort Kelsie",
+    "id": "5"
+  }
+];
+document.write("<table border=1>")
+	for(let i=0;i<arr.length; i++){
+        document.write("<tr>");
+            document.write("<td>"+ arr[i].Name + "</td>");
+            document.write("<td>"+ arr[i].Age + "</td>");
+            document.write("<td>"+ arr[i].Number + "</td>");
+            document.write("<td>"+ arr[i].Avatar + "</td>");
+            document.write("<td>"+ arr[i].Address + "</td>");
+            document.write("<td>"+ arr[i].id + "</td>");
+        document.write("</tr>")
+	}
+    document.write("</table>")
+</script>
+</body>
+</html>
