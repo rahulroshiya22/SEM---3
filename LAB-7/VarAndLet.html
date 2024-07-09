@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference b/w Var and Let</title>
+</head>
+<body>
+    <script>
+        function example()
+        {
+            var x = 10;
+            if(true) 
+            {
+                let y = 20;
+                console.log("Difference between var and let in function scope:", x, y);    
+            }
+        }
+        example();
+    </script>
+</body>
+</html>
