@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Display array</title>
+</head>
+<body>
+<script type="text/javascript">
+	let arr = [
+  {
+    "Name": "Handmade Plastic Car",
+    "Price": "726.00",
+    "Date": "2030-09-04T09:23:16.945Z",
+    "MadeIn": "Guinea",
+    "id": "1"
+  },
+  {
+    "Name": "Bespoke Steel Bike",
+    "Price": "457.00",
+    "Date": "2059-04-02T12:40:47.412Z",
+    "MadeIn": "Peru",
+    "id": "2"
+  },
+  {
+    "Name": "Awesome Plastic Keyboard",
+    "Price": "846.00",
+    "Date": "2079-03-27T02:14:17.637Z",
+    "MadeIn": "Morocco",
+    "id": "3"
+  },
+  {
+    "Name": "Practical Steel Soap",
+    "Price": "722.00",
+    "Date": "2032-04-30T06:47:07.633Z",
+    "MadeIn": "Lebanon",
+    "id": "4"
+  },
+  {
+    "Name": "Luxurious Fresh Chips",
+    "Price": "776.00",
+    "Date": "2079-02-28T20:01:55.730Z",
+    "MadeIn": "Micronesia",
+    "id": "5"
+  }
+]
+document.write("<table border=1>")
+	for(let i=0;i<arr.length; i++){
+        document.write("<tr>");
+            document.write("<td>"+ arr[i].Name + "</td>");
+            document.write("<td>"+ arr[i].Price + "</td>");
+            document.write("<td>"+ arr[i].Date + "</td>");
+            document.write("<td>"+ arr[i].MadeIn + "</td>");
+            document.write("<td>"+ arr[i].id + "</td>");
+        document.write("</tr>")
+	}
+    document.write("</table>")
+</script>
+</body>
+</html>

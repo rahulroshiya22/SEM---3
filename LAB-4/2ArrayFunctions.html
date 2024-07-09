@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions of array</title>
+</head>
+<body>
+    <script>
+        arr = [1, 2, 3, 4, 5];
+        document.write("Array:", arr);
+        arr.push(6);
+        document.write("<br>Push:", arr);
+        a = arr.pop();
+        document.write("<br>Pop:", arr , a);
+        arr.shift();
+        document.write("<br>Shift:", arr);
+        arr.unshift(3);
+        document.write("<br>Unshift:", arr);
+        new_arr = arr.slice(3, arr.length);
+        document.write("<br>Slice:", new_arr);
+        arr.splice(0, 3);
+        document.write("<br>splice:", arr);
+    </script>
+</body>
+</html>

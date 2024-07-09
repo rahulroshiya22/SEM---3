@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Display array</title>
+</head>
+<body>
+<script type="text/javascript">
+	let arr = [
+  {
+    "Name": "Drew Murphy",
+    "RollNO": "895.564.0078 x572",
+    "Avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/966.jpg",
+    "Address": "East Desmond",
+    "id": "1"
+  },
+  {
+    "Name": "Frances Boyer",
+    "RollNO": "624.227.1219 x14887",
+    "Avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/423.jpg",
+    "Address": "West Ali",
+    "id": "2"
+  },
+  {
+    "Name": "Clyde Ritchie",
+    "RollNO": "245.792.9294 x969",
+    "Avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1002.jpg",
+    "Address": "Jonesboro",
+    "id": "3"
+  },
+  {
+    "Name": "Don Glover",
+    "RollNO": "249.582.0308",
+    "Avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/603.jpg",
+    "Address": "West Dan",
+    "id": "4"
+  },
+  {
+    "Name": "Mitchell Mertz",
+    "RollNO": "(545) 593-4416 x1427",
+    "Avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/492.jpg",
+    "Address": "Towson",
+    "id": "5"
+  }
+]
+document.write("<table border=1>")
+	for(let i=0;i<arr.length; i++){
+        document.write("<tr>");
+            document.write("<td>"+ arr[i].Name + "</td>");
+            document.write("<td>"+ arr[i].RollNO + "</td>");
+            document.write("<td>"+ "<img src= arr[i].Avatar>" + "</td>");
+            document.write("<td>"+ arr[i].Address + "</td>");
+            document.write("<td>"+ arr[i].id + "</td>");
+        document.write("</tr>")
+	}
+    document.write("</table>")
+</script>
+</body>
+</html>
