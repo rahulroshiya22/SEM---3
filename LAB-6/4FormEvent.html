@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event</title>
+</head>
+<body>
+
+    <body>
+        <form>
+        <button id="Submit" onclick="return display('Submit')">Submit</button>
+        <button id="Reset" onclick="return display('Reset')">Reset</button>
+    </form>
+        <script type="text/javascript">
+    
+            function display(id)
+            {
+                if(id === 'Submit')
+                {
+                    document.write('Form submitted successfully');
+                }
+                else if(id === 'Reset')
+                {
+                    document.write('Form reset successfully');
+                }
+                console.log(id+" button is clicked");
+                return false;
+            }
+        </script>
+</body>
+</html>
