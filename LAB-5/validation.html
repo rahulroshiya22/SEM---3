@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form id="registrationForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br>
+
+        <label for="repeatPassword">Repeat Password:</label>
+        <input type="password" id="repeatPassword" name="repeatPassword"><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob"><br>
+
+        <label for="enrollment">Enrollment:</label>
+        <input type="text" id="enrollment" name="enrollment"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="errorMessages"></p>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var errorMessages = [];
+
+    var username = document.getElementById('username').value;
+    if (username.length < 8) {
+        errorMessages.push("Username must be at least 8 characters long.");
+    }
+    var password = document.getElementById('password').value;
+    var repeatPassword = document.getElementById('repeatPassword').value;
+    var passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*]).{8,12}$/;
+    if (!passwordRegex.test(password)) {
+        errorMessages.push("Password must be 8-12 characters long, contain at least one digit, and one special character.");
+    }
+    if (password !== repeatPassword) {
+        errorMessages.push("Password and repeat password must match.");
+    }
+
+    var dob = new Date(document.getElementById('dob').value);
+    var age = calculateAge(dob);
+    if (age <= 18) {
+        errorMessages.push("Age must be greater than 18.");
+    }
+
+    var enrollment = document.getElementById('enrollment').value;
+    var enrollmentRegex = /^\d{11}$/;
+    if (!enrollmentRegex.test(enrollment)) {
+        errorMessages.push("Enrollment must be exactly 11 digits.");
+    }
+
+    var email = document.getElementById('email').value;
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        errorMessages.push("Invalid email address.");
+    }
+    var errorMessagesContainer = document.getElementById('errorMessages');
+    if (errorMessages.length > 0) {
+        errorMessagesContainer.innerHTML = errorMessages.join('<br>');
+    } else {
+        errorMessagesContainer.innerHTML = "Form submitted successfully!";
+    }
+});
+
+function calculateAge(dob) {
+    var today = new Date();
+    var age = today.getFullYear() - dob.getFullYear();
+    var monthDiff = today.getMonth() - dob.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+        age--;
+    }
+    return age;
+}
+
+    </script>
+</body>
+</html>
