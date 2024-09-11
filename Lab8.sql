@@ -1,4 +1,4 @@
-USE CSE_B_312
+USE CSE_3B_409
 
 CREATE TABLE SALES_DATA(
 	
@@ -21,7 +21,7 @@ VALUES
 ('ASIA','TV',1100,'2024'),
 ('NORTH AMERICA','WATCH',1700,'2024')
 
---> Part – A: 
+--> Part â€“ A: 
 --1. Display Total Sales Amount by Region. 
 SELECT SUM(SALES_AMOUNT),REGION FROM SALES_DATA
 GROUP BY REGION
@@ -78,7 +78,7 @@ WHERE SALES_YEAR = '2023'
 GROUP BY REGION
 ORDER BY SUM(SALES_AMOUNT)
 
---> Part – B: 
+--> Part â€“ B: 
 
 --1. Display Count of Orders by Year and Region, 
 --Sorted by Year and Region 
@@ -105,7 +105,7 @@ SELECT TOP 3 REGION,SUM(SALES_AMOUNT) FROM SALES_DATA
 WHERE SALES_YEAR = '2024'
 GROUP BY REGION
 
---> Part – C: 
+--> Part â€“ C: 
 
 --1. Display Products with Average Sales Amount 
 --Between 1000 and 2000, Ordered by Product Name 
