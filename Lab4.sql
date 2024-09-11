@@ -1,4 +1,4 @@
-USE CSE_B_312
+USE CSE_3B_409
 
 --> PART = A
 
@@ -17,7 +17,8 @@ EXEC sp_rename 'DEPOSIT.ACTNO',  'ANO';
 --5. Delete Column City from the DEPOSIT table.
 ALTER TABLE DEPOSIT DROP COLUMN CITY
 
---6. Change name of table DEPOSIT to DEPOSIT_DETAIL.EXEC sp_rename 'DEPOSIT',  'DEPOSIT_DETAILS';
+--6. Change name of table DEPOSIT to DEPOSIT_DETAIL.
+EXEC sp_rename 'DEPOSIT',  'DEPOSIT_DETAILS';
 
 
 --> PART - B
