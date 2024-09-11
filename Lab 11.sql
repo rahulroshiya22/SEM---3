@@ -1,4 +1,4 @@
-USE CSE_B_312
+USE CSE_3B_409
 
 CREATE TABLE STU_INFO (
 	RNO INT,
@@ -45,7 +45,7 @@ VALUES
 ('E06','ANJANA','E04')
 
 
--->  Part – A:
+-->  Part â€“ A:
 
 --1. Combine information from student and result table using 
 --cross join or Cartesian product. 
@@ -80,14 +80,14 @@ FROM STU_INFO LEFT OUTER JOIN RESULT
 ON STU_INFO.RNO = RESULT.RNO
 
 --7. Display Rno, Name, Branch and SPI of 
---CE branch’s student only. 
+--CE branchâ€™s student only. 
 SELECT STU_INFO.RNO,STU_INFO.SNAME,STU_INFO.BRANCH,RESULT.SPI
 FROM STU_INFO LEFT OUTER JOIN RESULT
 ON STU_INFO.RNO = RESULT.RNO
 WHERE STU_INFO.BRANCH = 'CE'
 
 --8. Display Rno, Name, Branch and SPI of 
---other than EC branch’s student only. 
+--other than EC branchâ€™s student only. 
 SELECT STU_INFO.RNO,STU_INFO.SNAME,STU_INFO.BRANCH,RESULT.SPI
 FROM STU_INFO LEFT OUTER JOIN RESULT
 ON STU_INFO.RNO = RESULT.RNO
@@ -107,7 +107,7 @@ ON S.RNO = R.RNO
 WHERE S.BRANCH IN('CE','ME') 
 GROUP BY S.BRANCH
 
---> Part – B: 
+--> Part â€“ B: 
 
 --1. Display average result of each branch and 
 --sort them in ascending order by SPI. 
@@ -125,10 +125,10 @@ ON STU_INFO.RNO = RESULT.RNO
 GROUP BY STU_INFO.BRANCH
 ORDER BY MAX(RESULT.SPI) DESC
 
---> Part – C: 
+--> Part â€“ C: 
 
 --1. Retrieve the names of employee along with 
---their manager’s name from the Employee table. 
+--their managerâ€™s name from the Employee table. 
 SELECT E1.ENAME
 FROM EMPLOYEE_MASTER E1
 INNER JOIN EMPLOYEE_MASTER AS E2 
