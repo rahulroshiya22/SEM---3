@@ -1,4 +1,4 @@
-USE CSE_B_312
+USE CSE_3B_409
 
 CREATE TABLE STUDENT_INFO(
 	RNO INT,
@@ -17,7 +17,7 @@ VALUES
 (105,'MEERA','EE',5.52,2),
 (106,'MAHESH','EC',4.50,3)
 
---> Part – A: 
+--> Part â€“ A: 
 
 
 --> Views (First create a view then display all views) 
@@ -67,7 +67,7 @@ DELETE
 FROM ACADEMICDATA
 WHERE RNO = 104
 
---> Part – B: 
+--> Part â€“ B: 
 
 
 --1. Create a view that displays information of all students whose 
@@ -90,7 +90,7 @@ FROM STUDENT_INFO
 WHERE BNAME = 'CE'
 
 
---> Part – C: 
+--> Part â€“ C: 
 
 
 --1. Create a view Result_EC that displays the name and SPI of students 
@@ -106,7 +106,7 @@ SET SPI = 4.90
 WHERE SNAME = 'MAHESH'
 
 --3. Create a view Stu_Bklog with RNo, Name and Bklog columns in 
---which name starts with ‘M’ and having bklogs more than 5. 
+--which name starts with â€˜Mâ€™ and having bklogs more than 5. 
 CREATE VIEW STU_BKLOG AS
 SELECT RNO,SNAME,BKLOG
 FROM STUDENT_INFO
