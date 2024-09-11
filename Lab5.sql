@@ -1,4 +1,4 @@
-USE CSE_B_312
+USE CSE_3B_409
 
 CREATE TABLE STUDENT(
 	STUID INT,
@@ -11,11 +11,11 @@ CREATE TABLE STUDENT(
 
 INSERT INTO STUDENT(STUID,FIRSTNAME,LASTNAME,WEBSITE,CITY,ADRESS)
 VALUES
-(1011, 'KEYUR', 'PATEL', 'TECHNOTHETECH.COM', 'RAJKOT', 'A-303 ‘Vasant Kunj’, Rajkot'),
-(1022, 'HARDIK', 'SHAH', 'DIGMINECRAFT.COM', 'AHMEDABAD', '“Ram Krupa”, Raiya Road'),
+(1011, 'KEYUR', 'PATEL', 'TECHNOTHETECH.COM', 'RAJKOT', 'A-303 â€˜Vasant Kunjâ€™, Rajkot'),
+(1022, 'HARDIK', 'SHAH', 'DIGMINECRAFT.COM', 'AHMEDABAD', 'â€œRam Krupaâ€, Raiya Road'),
 (1033, 'KAJAL', 'TRIVEDI', 'BIGACTIVITIES.COM', 'BARODA', 'Raj bhavan plot, near 
 garden'),
-(1044, 'BHOOMI', 'GAJERA', 'CHECKYOURMATH.COM', 'AHMEDABAD', '“Jig’s Home”, Narol'), 
+(1044, 'BHOOMI', 'GAJERA', 'CHECKYOURMATH.COM', 'AHMEDABAD', 'â€œJigâ€™s Homeâ€, Narol'), 
 (1055, 'HARMIT', 'MITEL', '@ME.DARSHAN.COM', 'RAJKOT', 'B-55, Raj Residency'),
 (1066, 'ASHOK', 'JANI', 'NULL', 'BARODA' ,'A502, Club House Building')
 
@@ -25,7 +25,7 @@ garden'),
 
 --> PART = A
 
---1. Display the name of students whose name starts with ‘k’.
+--1. Display the name of students whose name starts with â€˜kâ€™.
 SELECT FIRSTNAME FROM STUDENT
 WHERE FIRSTNAME LIKE 'K%'
 
@@ -39,17 +39,17 @@ WHERE FIRSTNAME LIKE '_____'
 SELECT FIRSTNAME , LASTNAME FROM STUDENT
 WHERE CITY LIKE '______%A'
 
---4. Display all the students whose last name ends with ‘tel’.
+--4. Display all the students whose last name ends with â€˜telâ€™.
 SELECT FIRSTNAME FROM STUDENT
 WHERE LASTNAME LIKE '%TEL'
 
 --5. Display all the students whose 
---first name starts with ‘ha’ & ends with‘t’.
+--first name starts with â€˜haâ€™ & ends withâ€˜tâ€™.
 SELECT FIRSTNAME FROM STUDENT 
 WHERE FIRSTNAME LIKE 'HA%T'
 
 --6. Display all the students whose 
---first name starts with ‘k’ and third character is ‘y’.
+--first name starts with â€˜kâ€™ and third character is â€˜yâ€™.
 SELECT FIRSTNAME FROM STUDENT
 WHERE FIRSTNAME LIKE 'K_Y%' 
 
@@ -58,12 +58,12 @@ WHERE FIRSTNAME LIKE 'K_Y%'
 SELECT FIRSTNAME FROM STUDENT
 WHERE WEBSITE IS NULL AND FIRSTNAME LIKE '____'
 
---8. Display all the students whose last name consist of ‘jer’.
+--8. Display all the students whose last name consist of â€˜jerâ€™.
 SELECT FIRSTNAME FROM STUDENT
 WHERE LASTNAME LIKE '%JER%'
 
 --9. Display all the students whose 
---city name starts with either ‘r’ or ‘b’.
+--city name starts with either â€˜râ€™ or â€˜bâ€™.
 SELECT FIRSTNAME FROM STUDENT 
 WHERE CITY LIKE 'R%' OR CITY LIKE 'B%'
 
@@ -76,7 +76,7 @@ WHERE WEBSITE LIKE 'NULL'
 SELECT FIRSTNAME FROM STUDENT 
 WHERE FIRSTNAME LIKE '[A-H]'
 
---12. Display all the students whose name’s second character is vowel.
+--12. Display all the students whose nameâ€™s second character is vowel.
 --SELECT FIRSTNAME FROM STUDENT
 --WHERE FIRSTNAME LIKE '_A%' OR FIRSTNAME LIKE '_E%' 
 --OR FIRSTNAME LIKE '_I%' OR FIRSTNAME LIKE '_O%' 
@@ -89,11 +89,14 @@ SELECT FIRSTNAME FROM STUDENT WHERE FIRSTNAME LIKE '_[A,E,I,O,U]%'
 SELECT FIRSTNAME FROM STUDENT
 WHERE FIRSTNAME LIKE '_____' AND WEBSITE LIKE 'NULL'
 
---14. Display all the students whose last name starts with ‘Pat’. 
+--14. Display all the students whose last name starts with â€˜Patâ€™. 
 SELECT FIRSTNAME FROM STUDENT
 WHERE LASTNAME LIKE 'PAT%'
 
---15. Display all the students whose city name does not starts with ‘b’.SELECT FIRSTNAME FROM STUDENTWHERE CITY NOT LIKE 'B%'
+--15. Display all the students whose city name does not starts with â€˜bâ€™.
+SELECT FIRSTNAME FROM STUDENT
+WHERE CITY NOT LIKE 'B%'
+
 --> PART = B
 
 --1. Display all the students whose name starts from alphabet A or H.
@@ -101,13 +104,13 @@ SELECT FIRSTNAME FROM STUDENT
 WHERE FIRSTNAME LIKE 'A%' OR FIRSTNAME LIKE 'H%'
 
 --2. Display all the students whose 
---name’s second character is vowel and of and start with H.
+--nameâ€™s second character is vowel and of and start with H.
 SELECT FIRSTNAME FROM STUDENT 
 WHERE FIRSTNAME LIKE '_A%' OR FIRSTNAME LIKE '_E%' OR
 FIRSTNAME LIKE '_I%' OR FIRSTNAME LIKE '_O%' OR
 FIRSTNAME LIKE '_U%' AND FIRSTNAME LIKE 'H%'
 
---3. Display all the students whose last name does not ends with ‘a’.
+--3. Display all the students whose last name does not ends with â€˜aâ€™.
 SELECT FIRSTNAME FROM  STUDENT 
 WHERE LASTNAME NOT LIKE '%A' 
 
