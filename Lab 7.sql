@@ -1,4 +1,4 @@
-USE CSE_B_312
+USE CSE_3B_409
 
 CREATE TABLE EMP(
 	EID INT,
@@ -103,6 +103,6 @@ SELECT COUNT(EID) FROM EMP WHERE JDATE < '1-JAN-91' AND DEPART = 'IT'
 SELECT SUM(SALARY) FROM EMP GROUP BY JDATE
 
 --4. Find the Maximum salary department & city wise in which 
---city name starts with ‘R’.
+--city name starts with â€˜Râ€™.
 SELECT MAX(SALARY) FROM EMP WHERE CITY LIKE 'R%' GROUP BY DEPART , CITY
 	
