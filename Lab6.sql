@@ -1,4 +1,4 @@
-USE CSE_B_312
+USE CSE_3B_409
 
 --MATH FUNCTIONS
 
@@ -72,7 +72,30 @@ SELECT SIGN(-25) AS SIGN_VALUE
 SELECT SIGN(0) AS SIGN_VALUE
 SELECT SIGN(25) AS SIGN_VALUE
 
---16. Generate random number using function.SELECT RAND() AS RANDOM_VALUE--> PART - BCREATE TABLE EMP_MASTER(	EMPNO INT,	EMPNAME VARCHAR(50),	JDATE DATE,	SALARY INT,	COMIS INT,	CITY VARCHAR(50),	DCODE VARCHAR(50))INSERT INTO EMP_MASTER(EMPNO,EMPNAME,JDATE,SALARY,COMIS,CITY,DCODE)VALUES(101,'KEYUR','5-JAN-02',12000,4500,'RAJKOT','3@G'),(102,'HARDIK','15-FEB-04',14000,2500,'AHMEDABAD','3@'),(103,'KAJAL','14-MAR-06',15000,3000,'BARODA','3-GD'),(104,'BHOOMI','23-JUN-05',12500,1000,'AHMEDABAD','1A3D'),(105,'HARMIT','15-FEB-04',14000,2000,'RAJKOT','312A')--1. Display the result of Salary plus Commission.
+--16. Generate random number using function.
+SELECT RAND() AS RANDOM_VALUE
+
+--> PART - B
+
+CREATE TABLE EMP_MASTER(
+	EMPNO INT,
+	EMPNAME VARCHAR(50),
+	JDATE DATE,
+	SALARY INT,
+	COMIS INT,
+	CITY VARCHAR(50),
+	DCODE VARCHAR(50)
+)
+
+INSERT INTO EMP_MASTER(EMPNO,EMPNAME,JDATE,SALARY,COMIS,CITY,DCODE)
+VALUES
+(101,'KEYUR','5-JAN-02',12000,4500,'RAJKOT','3@G'),
+(102,'HARDIK','15-FEB-04',14000,2500,'AHMEDABAD','3@'),
+(103,'KAJAL','14-MAR-06',15000,3000,'BARODA','3-GD'),
+(104,'BHOOMI','23-JUN-05',12500,1000,'AHMEDABAD','1A3D'),
+(105,'HARMIT','15-FEB-04',14000,2000,'RAJKOT','312A')
+
+--1. Display the result of Salary plus Commission.
 SELECT *, (SALARY + COMIS) AS SALARY_PLUS_COMISSION FROM EMP_MASTER;
 
 --2. Find smallest integer value that is 
@@ -129,7 +152,7 @@ SELECT SIGN(95) AS SIGN_VALUE
 
 --> PART - A
 
---1. Find the length of following. (I) NULL (II) ë hello í (III) Blank
+--1. Find the length of following. (I) NULL (II) ‚Äò hello ‚Äô (III) Blank
 SELECT LEN('NULL') AS LENGTH_VALUE
 SELECT LEN('HELLO') AS LENGTH_VALUE
 SELECT LEN('BLANK') AS LENGTH_VALUE
@@ -144,12 +167,12 @@ SELECT SUBSTRING('BALKRUSHNA PATEL',1,3) AS SUBSTRING_VALUE
 --4. Display 3rd to 10th character of your name.
 SELECT SUBSTRING('BALKRUSHNA PATEL',3,10) AS SUBSTRING_VALUE
 
---5. Write a query to convert ëabc123efgí to ëabcXYZefgí & 
---ëabcabcabcí to ëab5ab5ab5í using REPLACE.
+--5. Write a query to convert ‚Äòabc123efg‚Äô to ‚ÄòabcXYZefg‚Äô & 
+--‚Äòabcabcabc‚Äô to ‚Äòab5ab5ab5‚Äô using REPLACE.
 SELECT REPLACE('ABC123EFG','123','XYZ') AS REPLACE_VALUE
 SELECT REPLACE('ABCABCABC','C','5') AS REPLACE_VALUE
 
---6. Write a query to display ASCII code for ëaí,íAí,ízí,íZí, 0, 9.
+--6. Write a query to display ASCII code for ‚Äòa‚Äô,‚ÄôA‚Äô,‚Äôz‚Äô,‚ÄôZ‚Äô, 0, 9.
 SELECT ASCII('a') AS ASCII_VALUE
 SELECT ASCII('A') AS ASCII_VALUE
 SELECT ASCII('z') AS ASCII_VALUE
@@ -167,19 +190,19 @@ SELECT CHAR(48) AS CHARACTER_VALUE
 SELECT CHAR(57) AS CHARACTER_VALUE
 
 --8. Write a query to remove spaces from 
---left of a given string ëhello world ë.
+--left of a given string ‚Äòhello world ‚Äò.
 SELECT LTRIM('HELLO WORLD') AS SPACE_LEFTTRIM_VALUE
 
 --9. Write a query to remove spaces 
---from right of a given string ë hello world ë.
+--from right of a given string ‚Äò hello world ‚Äò.
 SELECT RTRIM('HELLO WORLD') AS SPACE_RIGHTTRIM_VALUE
 
 --10. Write a query to display first 4 & 
---Last 5 characters of ëSQL Serverí.
+--Last 5 characters of ‚ÄòSQL Server‚Äô.
 SELECT LEFT('SQL SERVER',4) AS LEFT_DISPLAY_VALUE
 SELECT RIGHT('SQL SERVER',5) AS RIGHT_DISPLAY_VALUE
 
---11. Write a query to convert a string ë1234.56í 
+--11. Write a query to convert a string ‚Äò1234.56‚Äô 
 --to number (Use cast and convert function).
 SELECT CAST(1234.56 AS INT) AS CAST_VALUE
 SELECT CONVERT(INT, 1234.56) AS CONVERT_VALUE
@@ -196,7 +219,7 @@ SELECT SPACE(10) + 'BALKRUSHNA PATEL' AS SPACE_VALUE
 SELECT 'BALKRUSHNA' + SPACE(2) + 'PATEL' AS CONCAT_WITH_PLUS_VALUE
 SELECT CONCAT('BALKRUSHNA','PATEL') AS CONCAT_FUNC_VALUE
 
---15. Find reverse of ìDarshanî.
+--15. Find reverse of ‚ÄúDarshan‚Äù.
 SELECT REVERSE('DARSHAN') AS REVERSE_VALUE 
 
 --16. Repeat your name 3 times.
