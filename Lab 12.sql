@@ -1,6 +1,6 @@
-USE CSE_B_312
+USE CSE_3B_409
 
---Part – A:
+--Part â€“ A:
 --1. Find all persons with their department name & code.
 SELECT *
 FROM PERSON
@@ -28,7 +28,7 @@ JOIN DEPARTMENT
 ON PERSON.D_TID = DEPARTMENT.D_ID
 WHERE PERSON.CITY <> 'RAJKOT'
 
---5. Retrieve person’s name of the person who joined the Civil department after 1-Aug-2001.
+--5. Retrieve personâ€™s name of the person who joined the Civil department after 1-Aug-2001.
 SELECT *
 FROM PERSON
 JOIN DEPARTMENT
@@ -86,7 +86,7 @@ FROM PERSON
 JOIN DEPARTMENT
 ON PERSON.D_ID = DEPARTMENT.D_ID
 
---Part – B:
+--Part â€“ B:
 --1. Produce Output Like: <PersonName> earns <Salary> from <DepartmentName> department monthly. (In
 --single column)
 --SELECT PERSON.PERSONNAME +'EARNS'+ CAST(PERSON.SALARY AS int) +'FROM'+ DEPT.DEPARTMENTNAME +'DEPARTMENT MONTHLY'
@@ -114,7 +114,7 @@ ON PERSON.D_ID = DEPARTMENT.D_ID
 GROUP BY DEPARTMENT.DNAME
 HAVING SUM(PERSON.SALARY) > 100000
 
---Part – C:
+--Part â€“ C:
 --1. List all departments who have no person.
 SELECT DEPARTMENT.DNAME, COUNT(PERSON.PERSON_ID) AS TOTAL_PERSON
 FROM PERSON
@@ -135,7 +135,7 @@ WHERE DEPARTMENT.DNAME = (SELECT DEPARTMENT.DNAME
 							GROUP BY DEPARTMENT.DNAME
 							HAVING COUNT(PERSON.PERSON_ID) > 2)
 
---3. Give a 10% increment in the computer department employee’s salary. (Use Update)
+--3. Give a 10% increment in the computer department employeeâ€™s salary. (Use Update)
 UPDATE PERSON
 SET SALARY = (SALARY + 0.1*SALARY)
 FROM PERSON
