@@ -1,4 +1,4 @@
-USE CSE_B_312
+USE CSE_3B_409
 
 CREATE TABLE STUDENT_DATA(
 	RNO INT,
@@ -43,7 +43,7 @@ VALUES
 (30,'MECHANICAL'),
 (40,'CIVIL')
 
---> Part – A:
+--> Part â€“ A:
 
 
 --1. Display details of students who are from computer department. 
@@ -69,7 +69,7 @@ SELECT COUNT(RNO) FROM STUDENT_DATA WHERE D_ID =
 SELECT * FROM STUDENT_DATA WHERE RNO =
 (SELECT RNO FROM ACADEMIC WHERE BKLOG > 1 )
 
---> Part – B: 
+--> Part â€“ B: 
 
 
 --1. Display name of students who are either from 
@@ -83,7 +83,7 @@ SELECT * FROM STUDENT_DATA WHERE D_ID =
 
 
 
---> Part – C: 
+--> Part â€“ C: 
 
 
 --1. Display name of students whose SPI is more than 
